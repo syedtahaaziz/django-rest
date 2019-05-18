@@ -37,7 +37,7 @@ pip install --quiet djangorestframework==3.6.4
 
 The ``` --quiet ``` option will hide the unnecessary console details for installing the package.
 
-## Creating a Hello World project
+## Creating a Project
 
 Now, we will create our first project with Django.
 
@@ -62,4 +62,52 @@ and wsgi.py which stands for web server gateway interface, helps Django to serve
 
 Django comes with the build in server. we can start it with the following command.
 
-``` python manage.py runserver ```
+``` 
+python manage.py runserver 
+```
+
+## Create an App
+
+Django uses the concept of app and project to keep the code clean and readable. Each app in the project is a single isolated working unit of a project. 
+For example for e-commerce project an one app can be made for user authentication , another for paytment and so on. 
+
+```
+python manage.py startapp pages 
+```
+Lets examine the tree structure for pages app.
+```
+── pages
+    ├── __init__.py
+    ├── admin.py
+    ├── apps.py
+    ├── migrations
+    │   └── __init__.py
+    ├── models.py
+    ├── tests.py
+    └── views.py
+ ```
+ Lets review what each new pages app file does.
+ 
+ * app.py is app own configuration file. 
+ * admin.py is a configuration file for build in Django Admin app
+ * migrations tracks the changes in models to keep the database sync with models. 
+ * models.py there is where you write database models. Django automatically converts these models into database tables.
+ * test.py is for app-specific tests
+ * views.py is where we handle request / response logic for our web app.
+ 
+ Even though our new app exists in Django project, Django doesnt know about it until we explicitly add it. 
+ 
+ 
+ ``` python 
+ INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+	'pages', #new
+]
+ ```
+ 
+ 
