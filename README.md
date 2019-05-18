@@ -147,11 +147,10 @@ urlpatterns = [
 On the top line we've imported path from Django to power our url patterns and on the next line we've imports views. ``` . ``` the dot represents that the ```views.py``` file is in the same directory. 
 
 Our ```urlpatterns``` has three parts: 
-	* a Python regular expression for the empty string ''.
-	* specify the view which is called homePageView
-	* add an optional url name of ```home```
+*  a Python regular expression for the empty string ```''```.
+*  specify the view which is called ```homePageView```
+*  add an optional url name of ```home```
 
 
-	
  
  
