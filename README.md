@@ -37,11 +37,25 @@ pip install --quiet djangorestframework==3.6.4
 
 The ``` --quiet ``` option will hide the unnecessary console details for installing the package.
 
-## Creating an App with Django
+## Creating a Hello World project
 
-Now, we will create our first app with Django.
+Now, we will create our first project with Django.
 
 ```
-django-admin.py startproject restful01
+django-admin.py startproject helloworld
 ```
 
+if you use tree. you can look at the directory structure of Django project
+
+```
+.
+├── README.md
+helloworld
+   ├── db.sqlite3
+   ├── helloworld
+   │   ├── __init__.py
+   │   ├── settings.py
+   ├── urls.py
+   │   └── wsgi.py   
+    ── manage.py
+``` 
