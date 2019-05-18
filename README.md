@@ -1,5 +1,10 @@
-# django-rest
-Django for Rest Api 
+# Django-REST Framework
+
+A hands-on guide towards creating RESTful services with Django-REST framework.
+
+
+
+## Installations
 
 create a virtual environment for your django project by using the following command. It is assumed that you are running python 3.5 and have install virtual environment. Cretae a new virtual enviroment will help manage the project dependencies.
 
@@ -32,7 +37,7 @@ pip install --quiet djangorestframework==3.6.4
 
 The ``` --quiet ``` option will hide the unnecessary console details for installing the package.
 
-# Creating an App with Django
+## Creating an App with Django
 
 Now, we will create our first app with Django.
 
