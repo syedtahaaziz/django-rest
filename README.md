@@ -126,7 +126,7 @@ Basically we're saying whenever this homePageView function is called, return the
 
 We have created a function that accepts the request object and returns a response object with "Hello World" string. 
 
-Now, we need to configure our urls. Within the app pages create a new file urls.py. This file will used to handle all the url related to this app. 
+Now, we need to configure our urls. Within the app pages create a new file urls.py. This file will used to handle all the url routes related to this app. 
 
 ```
 touch pages/urls.py
