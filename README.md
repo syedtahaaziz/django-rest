@@ -49,13 +49,17 @@ if you use tree. you can look at the directory structure of Django project
 
 ```
 .
-├── README.md
-helloworld
-   ├── db.sqlite3
-   ├── helloworld
-   │   ├── __init__.py
-   │   ├── settings.py
-   ├── urls.py
-   │   └── wsgi.py   
-    ── manage.py
+├── helloworld_project
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── manage.py
 ``` 
+
+The settings.py file controls our project's settings, url.py tells Django which pages to build in response to url request.
+and wsgi.py which stands for web server gateway interface, helps Django to serve our eventual pages. The last file manage.py is used to execute various Django  commands such as running the server. 
+
+Django comes with the build in server. we can start it with the following command.
+
+``` python manage.py runserver ```
