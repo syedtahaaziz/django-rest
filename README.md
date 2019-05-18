@@ -97,6 +97,7 @@ Lets examine the tree structure for pages app.
  
  Even though our new app exists in Django project, Django doesnt know about it until we explicitly add it. 
  
+ In your text editor open settings.py. Add under INSTALLED_APPS our new pages app. 
  
  ``` python 
  INSTALLED_APPS = [
@@ -109,5 +110,48 @@ Lets examine the tree structure for pages app.
 	'pages', #new
 ]
  ```
+ 
+ In Django views determine what content is displayed on the display while url conf determine where the content is going. 
+ 
+ Lets start by editing views.py
+ 
+ ``` python 
+ from django.http import HttpResponse
+ 
+ def homePageView(request):
+ 	return HttpResponse('Hello World')
+
+```
+Basically we're saying whenever this homePageView function is called, return the text "Hello World". We've imported build in HttpResponse method so that we can return the response object to the user. 
+
+We have created a function that accepts the request object and returns a response object with "Hello World" string. 
+
+Now, we need to configure our urls. Within the app pages create a new file urls.py. This file will used to handle all the url related to this app. 
+
+```
+touch pages/urls.py
+```
+Edit urls.py with the following code
+
+``` python
+
+from django.urls import path
+
+from . import views 
+
+urlpatterns = [
+	path('', views.homePageView, name='home')
+]
+```
+
+On the top line we've imported path from Django to power our url patterns and on the next line we've imports views. ``` . ``` the dot represents that the ```views.py``` file is in the same directory. 
+
+Our ```urlpatterns``` has three parts: 
+	* a Python regular expression for the empty string ''.
+	* specify the view which is called homePageView
+	* add an optional url name of ```home```
+
+
+	
  
  
