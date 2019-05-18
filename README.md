@@ -88,12 +88,12 @@ Lets examine the tree structure for pages app.
  ```
  Lets review what each new pages app file does.
  
- * app.py is app own configuration file. 
- * admin.py is a configuration file for build in Django Admin app
- * migrations tracks the changes in models to keep the database sync with models. 
- * models.py there is where you write database models. Django automatically converts these models into database tables.
- * test.py is for app-specific tests
- * views.py is where we handle request / response logic for our web app.
+ * ```app.py``` is app own configuration file. 
+ * ```admin.py``` is a configuration file for build in Django Admin app
+ * ```migrations``` tracks the changes in models to keep the database sync with models. 
+ * ```models.py``` there is where you write database models. Django automatically converts these models into database tables.
+ * ```test.py``` is for app-specific tests
+ * ```views.py``` is where we handle request / response logic for our web app.
  
  Even though our new app exists in Django project, Django doesnt know about it until we explicitly add it. 
  
